@@ -1,0 +1,59 @@
+site_name: MkDocs POC
+#site_url: https://example.com/
+repo_url: https://github.com/RafaelKuebler/MkDocs-POC
+site_description: Description added to the HTML page header
+site_author: Rafael Kübler da Silva
+
+theme:
+  # for other theme options see https://squidfunk.github.io/mkdocs-material/setup/
+  name: material
+  logo: img/favicon.ico
+  favicon: img/favicon.ico
+  palette:
+    scheme: slate # set dark mode
+  features:
+    - navigation.indexes # attach documents to sections
+    - toc.follow # scroll sidebar to selected anchor
+    - navigation.top # add a back-to-top button
+    - content.code.copy # add a copy button to code blocks
+    - content.tabs.link # switch all content tabs simultaneously
+
+markdown_extensions:
+  # for other extensions see https://facelessuser.github.io/pymdown-extensions/
+  - pymdownx.keys # render keyboard keys
+  - admonition
+  - pymdownx.details # collapse admonitions
+  - pymdownx.superfences # nest arbitrary content
+  - attr_list # add attributes to elements (e.g. for buttons)
+  - pymdownx.emoji: # add emoji support
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed: # enable content tabs
+      alternate_style: true
+  - footnotes
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - md_in_html # enable markdown inside html blocks
+  - tables # enable markdown table support
+  - toc:
+      permalink: true
+  - abbr # enable abbreviations
+  - pymdownx.snippets: # enable embedding content from arbitrary files
+      auto_append: # auto-append these files to the end of all documents
+        - includes/abbreviations.md
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: false # requires setting `js_files`
+      minify_css: false # requires setting `css_files`
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true # requires setting `js_files` or `css_files`
+  - awesome-pages
+  - htmlproofer
+  - git-revision-date-localized:
+      enabled: false # TODO: enable
+#extra:
+#  generator: false # disable generator notice at page bottom

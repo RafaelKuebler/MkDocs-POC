@@ -1,0 +1,15 @@
+nav:
+    - index.md
+    - sections
+    - admonitions.md
+    - buttons.md
+    - code.md
+    - content-tabs.md
+    - tables.md
+    - footnotes.md
+    - formatting.md
+    - emojis.md
+    - images.md
+    - lists.md
+    - tooltips.md
+    - ...
