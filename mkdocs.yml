@@ -1,5 +1,5 @@
 site_name: MkDocs POC
-#site_url: https://example.com/
+site_url: https://rafaelkuebler.github.io/MkDocs-POC
 repo_url: https://github.com/RafaelKuebler/MkDocs-POC
 site_description: Description added to the HTML page header
 site_author: Rafael Kübler da Silva

@@ -19,3 +19,7 @@ serve: # Start the dev server
 .PHONY: build
 build: # Build the website files
 	@. .venv/bin/activate && mkdocs build
+
+.PHONY: deploy
+deploy: # Deploy website to gh-deploy branch
+	@. .venv/bin/activate && mkdocs gh-deploy --force
