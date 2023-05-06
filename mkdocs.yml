@@ -54,6 +54,5 @@ plugins:
   - awesome-pages
   - htmlproofer
   - git-revision-date-localized:
-      enabled: false # TODO: enable
 #extra:
 #  generator: false # disable generator notice at page bottom
